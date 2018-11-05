@@ -6,14 +6,16 @@
  * Branding image or text of the site
  */
 .c-logo {
-	max-width: 14rem;
+	margin-bottom: $spacing-large;
 }
 
 /**
  * Logo link
  */
 .c-logo__link {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /**
@@ -21,4 +23,15 @@
  */
 .c-logo__img {
 	display: block;
+	max-width: 6rem;
+	margin-bottom: 0.25rem;
+}
+
+/**
+ * Logo text
+ */
+ .c-logo__text {
+	text-transform: lowercase;
+	font-weight: bold;
+	color: $color-white;
 }

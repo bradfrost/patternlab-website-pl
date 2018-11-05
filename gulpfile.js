@@ -10,6 +10,7 @@ var gulp = require('gulp'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
   svgSprite = require('gulp-svg-sprites'),
+  scssToJson = require("scsstojson"),
   argv = require('minimist')(process.argv.slice(2)),
   chalk = require('chalk'),
   copy = require('gulp-copy'),
@@ -53,6 +54,50 @@ gulp.task('pl-sass', function(){
 });
 
 /******************************************************
+ * SCSS TO JSON
+ ******************************************************/
+gulp.task("scsstojson", function (done) {
+  var items = [
+    {
+      src: "./source/css/scss/abstracts/_variables.scss",
+      dest: "./source/_patterns/00-atoms/01-global/00-brand-colors.json",
+      lineStartsWith: "$color-brand-",
+      allowVarValues: false
+    },
+    {
+      src: "./source/css/scss/abstracts/_variables.scss",
+      dest:
+        "./source/_patterns/00-atoms/01-global/00-neutral-colors.json",
+      lineStartsWith: "$color-neutral-",
+      allowVarValues: false
+    },
+    {
+      src: "./source/css/scss/abstracts/_variables.scss",
+      dest:
+        "./source/_patterns/00-atoms/01-global/00-utility-colors.json",
+      lineStartsWith: "$color-utility-",
+      allowVarValues: false
+    },
+    {
+      src: "./source/css/scss/abstracts/_variables.scss",
+      dest: "./source/_patterns/00-atoms/01-global/02-font-families.json",
+      lineStartsWith: "$font-family-",
+      allowVarValues: false
+    },
+    {
+    src: "./source/css/scss/abstracts/_variables.scss",
+    dest: "./source/_patterns/00-atoms/01-global/02-font-sizes.json",
+    lineStartsWith: "$font-size-",
+    allowVarValues: false
+    }
+  ];
+
+  scssToJson(items, {}, function () {
+    done();
+  });
+});
+
+/******************************************************
 * AUTOPREFIXER
 ******************************************************/
 gulp.task('prefix', () =>
@@ -69,15 +114,18 @@ gulp.src('./public/css/style.css')
  * SVG SPRITE
 ******************************************************/
 gulp.task('svg-sprite', function () {
-    return gulp.src('source/icons/*.svg')
-      .pipe(svgSprite({
-        mode: 'defs',
-        preview: false,
-        svg: {
-          defs: 'icons.svg'
-        }
-      }))
-      .pipe(gulp.dest('public'));
+  return gulp.src('source/icons/*.svg')
+    .pipe(svgSprite({
+      mode: 'symbols',
+      cssFile: "../../css/svg-sprite.css",
+      preview: {
+          symbols: '../source/_patterns/00-atoms/images/icons.mustache'
+      },
+      svg: {
+        symbols: 'icons.svg'
+      }
+    }))
+    .pipe(gulp.dest('public'));
 });
 
 /******************************************************
@@ -125,6 +173,15 @@ gulp.task('pl-copy:img', function () {
     .pipe(gulp.dest(normalizePath(paths().public.images)));
 });
 
+// SVG CSS copy
+gulp.task("pl-copy:svg-css", function () {
+  return gulp
+    .src("svg-sprite.css", {
+      cwd: normalizePath(paths().source.css)
+    })
+    .pipe(gulp.dest(normalizePath(paths().public.css)));
+});
+
 // Favicon copy
 gulp.task('pl-copy:favicon', function () {
   return gulp.src('favicon.ico', {cwd: normalizePath(paths().source.root)} )
@@ -135,6 +192,15 @@ gulp.task('pl-copy:favicon', function () {
 gulp.task('pl-copy:font', function () {
   return gulp.src('*', {cwd: normalizePath(paths().source.fonts)})
     .pipe(gulp.dest(normalizePath(paths().public.fonts)));
+});
+
+// Pattern scaffolding copy
+gulp.task("pl-copy:pattern-scaffolding", function () {
+  return gulp
+    .src("pattern-scaffolding.css", {
+      cwd: normalizePath(paths().source.css)
+    })
+    .pipe(gulp.dest(normalizePath(paths().public.css)));
 });
 
 // Styleguide Copy everything but css
@@ -230,9 +296,10 @@ gulp.task('pl-assets', gulp.series(
   'pl-copy:favicon',
   'svg-sprite',
   'pl-copy:font',
-  gulp.series('pl-sass', 'prefix', function(done){done();}), //CSS tasks
+  gulp.series('pl-sass', 'prefix', 'scsstojson', function(done){done();}), //CSS tasks
   'pl-copy:styleguide',
   'pl-copy:styleguide-css',
+  'pl-copy:svg-css',
   'concat-and-minify'
 ));
 
@@ -299,19 +366,34 @@ function reloadCSS(done) {
   done();
 }
 
+/**
+ * Reloads BrowserSync, with JS injection.
+ * Note: Exits more reliably when used with a done callback.
+ */
+function reloadJS(done) {
+  browserSync.reload('*.js');
+  done();
+}
+
 function watch() {
   const watchers = [
     {
       name: 'CSS',
       paths: [normalizePath(paths().source.css, '**', '*.scss')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series('pl-sass',  reloadCSS)
+      tasks: gulp.series('pl-sass', 'prefix', reloadCSS)
+    },
+    {
+      name: 'SVG Sprite CSS',
+      paths: [normalizePath(paths().source.css, 'svg-sprite.css')],
+      config: { awaitWriteFinish: true },
+      tasks: gulp.series('pl-copy:svg-css', reloadCSS)
     },
     {
       name: 'Pattern Scaffolding CSS',
       paths: [normalizePath(paths().source.css, 'pattern-scaffolding.css')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series(reloadCSS)
+      tasks: gulp.series("pl-copy:pattern-scaffolding", reloadCSS)
     },
     {
       name: 'Images',
@@ -329,7 +411,7 @@ function watch() {
       name: 'JavaScript',
       paths: [normalizePath(paths().source.js, '**', '*.js')],
       config: { awaitWriteFinish: true },
-      tasks: gulp.series('concat-and-minify')
+      tasks: gulp.series('concat-and-minify', reloadJS)
     },
     {
       name: 'Styleguide Files',
@@ -343,11 +425,9 @@ function watch() {
         normalizePath(paths().source.patterns, '**', '*.json'),
         normalizePath(paths().source.patterns, '**', '*.md'),
         normalizePath(paths().source.data, '**', '*.json'),
-        normalizePath(paths().source.css, '**/*.scss'),
         normalizePath(paths().source.fonts, '**', '*'),
         normalizePath(paths().source.images, '**', '*'),
         normalizePath(paths().source.icons, '**', '*'),
-        normalizePath(paths().source.js, '**', '*'),
         normalizePath(paths().source.meta, '**', '*'),
         normalizePath(paths().source.annotations, '**', '*')
       ].concat(getTemplateWatches()),

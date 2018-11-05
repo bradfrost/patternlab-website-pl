@@ -59,17 +59,20 @@ code {
  * Preformatted text base styles
  */
 pre {
-	background: $color-gray-02;
-	border: 1px solid $color-gray-13;
+	background: $color-gray-88;
+	border-left: 10px solid $color-brand-green;
 	font-size: $font-size-med;
-	padding: 1rem;
-    overflow-x: auto;
+	padding: 2rem;
+	overflow-x: auto;
+	color: $color-white;
 
 	/**
 	 * Remove border from code within preformatted text block
 	 */
 	code {
 		border: 0;
+		background: transparent;
+		color: inherit;
 	}
 }
 

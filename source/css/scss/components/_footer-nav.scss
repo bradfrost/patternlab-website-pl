@@ -1,0 +1,15 @@
+/*------------------------------------*\
+    #FOOTER NAV
+\*------------------------------------*/
+
+/**
+ * The nav inside the footer 
+ */
+.c-footer-nav {
+    font-size: $font-size-sm-2;
+    display: flex;
+}
+
+.c-footer-nav__item {
+    margin-right: $spacing-large;
+}

@@ -10,6 +10,7 @@
 .l-container {
 	max-width: $l-max-width;
 	margin: 0 auto;
+	width: 100%;
 }
 
 /**
@@ -22,6 +23,9 @@
     max-width: $l-linelength-width;
 }
 
+.l-grid__sidebar {
+	
+}
 
 
 
@@ -34,14 +38,12 @@
  * Grid Container
  */
 .l-grid {
-	display: flex;
-	flex-wrap: wrap;
+	
 
-	@supports (display: grid) {
+	@media all and (min-width: 47em) {
 		display: grid;
-		grid-gap: 16px;
-		grid-template-columns: repeat(auto-fill, minmax(285px, 1fr) );
-		margin: 0;
+		grid-template-columns: 320px 1fr;
+		grid-gap: 6rem;
 	}
 }
 

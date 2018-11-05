@@ -7,13 +7,12 @@
  * 1) Button or link that has functionality to it
  */
 .c-btn {
+	font-family: $font-secondary;
 	display: inline-block;
 	border: $border-thickness solid $color-btn-primary-border;
-	border-radius: $border-radius;
-	background: $color-gray-73;
-	color: $color-white;
+	background: $color-brand-green;
+	color: $color-black;
 	line-height: 1;
-	font-weight: bold;
 	padding: 1rem 2rem;
 	border: 0;
 	text-align: center;

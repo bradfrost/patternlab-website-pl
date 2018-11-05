@@ -42,6 +42,7 @@
  * 1) Brand=specific colors
  */
 $color-brand-blue: #0000ff;
+$color-brand-green: #1ffd53;
 
 /**
  * Neutral Colors
@@ -55,6 +56,7 @@ $color-gray-27: #bbb;
 $color-gray-50: #808080;
 $color-gray-60: #666;
 $color-gray-73: #444;
+$color-gray-88: #1f1f1f;
 $color-gray-93: #131313;
 $color-black: #000;
 
@@ -84,7 +86,7 @@ $color-utility-warning-light: #fffecf;
  * Font Family
  */
 $font-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-secondary: serif;
+$font-secondary: monospace;
 
 
 /**
@@ -95,17 +97,17 @@ $font-size-sm-2: 0.85rem;
 $font-size-med: 1rem;
 $font-size-med-2: 1.2rem;
 $font-size-large: 2rem;
-$font-size-xl: 3rem;
+$font-size-xl: 3.8rem;
 
 /**
  * Line Height
  */
-$line-height: 1.5;
-
-$font-size-h1: 48px !default;
-$font-size-h2: 36px !default;
-$font-size-h3: 27px !default;
-$font-size-h4: 19px !default;
+$line-height-sm: 0.8;
+$line-height-sm-2: 0.9;
+$line-height-med: 1;
+$line-height-med-2: 1.2;
+$line-height-large: 1.6;
+$line-height-xl: 1.8;
 
 
 
@@ -119,7 +121,7 @@ $font-size-h4: 19px !default;
  * Max Width
  */
 $l-max-width: 60rem !default;
-$l-linelength-width: 36rem !default;
+$l-linelength-width: 40rem !default;
 
 
 

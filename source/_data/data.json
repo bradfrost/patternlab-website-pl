@@ -1,8 +1,8 @@
 {
-	"title" : "Company Name",
+	"title" : "Pattern Lab",
 	"company" : {
-		"name" : "Company Name",
-		"url" : "http://company.com"
+		"name" : "Pattern Lab",
+		"url" : "https://patternlab.io"
 	},
 	"user" : {
 		"name" : "Thisisauser Withaverylongname",
@@ -10,7 +10,7 @@
 	},
 	"page" : {
 		"title" : "This is the page title",
-		"description" : "This is the page description"
+		"description" : false
 	},
 	"heading" : "Heading ipsum dolor sit (39 characters)",
 	"excerpt" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",

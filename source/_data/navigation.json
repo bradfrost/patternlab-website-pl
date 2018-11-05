@@ -34,5 +34,52 @@
             "label" : "Footer Nav",
             "url" : "#"
         }
+    ],
+    "treeNavItems" : [
+        {
+            "url" : "#",
+            "label" : "Download"
+        },
+        {
+            "url" : "#",
+            "label" : "Documentation",
+            "styleModifier" : "c-tree-nav__link--is-active",
+            "treeSubNav" : true,
+            "treeSubNavItems" : [
+                {
+                    "url" : "#",
+                    "label" : "Modifying the pattern header & footer"
+                },
+                {
+                    "url" : "#",
+                    "label" : "Overview of data"
+                },
+                {
+                    "url" : "#",
+                    "label" : "Overview of the Ecosystem"
+                },
+                {
+                    "url" : "#",
+                    "label" : "Stopping public/ from being cleaned"
+                },
+                {
+                    "url" : "#",
+                    "label" : "Starterkits"
+                }
+            ]
+        },
+        {
+            "url" : "#",
+            "label" : "Resources"
+        },
+        {
+            "url" : "#",
+            "label" : "Demos"
+        },
+        {
+            "url" : "#",
+            "label" : "On Github"
+        }
     ]
+        
 }

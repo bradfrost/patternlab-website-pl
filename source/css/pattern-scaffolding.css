@@ -224,3 +224,10 @@
         max-width: 20rem;
     }
 }
+
+
+.fpo {
+    background: #eee;
+    padding: 1rem;
+    text-align: center;
+}

@@ -7,7 +7,10 @@
  */
 .c-header {
 	position: relative;
-	background: $color-gray-07;
+	background: $color-gray-88;
+	color: $color-gray-50;
+	min-height: 100vh;
+	padding: $spacing;
 }
 
 /**
@@ -15,7 +18,7 @@
  */
 .c-header__inner {
 	display: flex;
-	padding: 1rem;
+	flex-direction: column;
 
 	/**
 	 * Header inner within vertical header

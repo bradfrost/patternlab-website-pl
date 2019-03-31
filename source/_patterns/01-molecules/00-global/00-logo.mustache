@@ -1,11 +1,20 @@
 <h3 class="c-logo">
+	<a
+		href="{{ link.pages - homepage }}"
+		class="c-logo__link"
+		rel="home"
+	>
+		{{> atoms-logo }}
 
-    <a href="{{ link.pages-homepage }}" class="c-logo__link" rel="home">
+		<div class="c-logo__body">
+			<span class="c-logo__text">{{
+				company.name
+			}}</span>
 
-        {{> atoms-logo }}
-
-        <span class="c-logo__text">{{ company.name }}</span>
-
-    </a><!--end c-logo__link-->
-    
-</h3><!--end c-logo-->
+			<span class="c-logo__meta"
+				>v3.0</span
+			>
+		</div></a
+	><!--end c-logo__link-->
+</h3>
+<!--end c-logo-->

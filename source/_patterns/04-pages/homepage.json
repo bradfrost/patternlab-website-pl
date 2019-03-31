@@ -1,4 +1,5 @@
 {
-    "title": "WELCOME TO PATTERN LAB",
-    "description" : "Here's a short description of what Pattern Lab is"
+    "page" : {
+        "title" : "This is the homepage"
+    }
 }

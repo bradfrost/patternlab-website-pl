@@ -20,15 +20,11 @@
  *    kinds of displays
  */
 .l-linelength-container {
-    max-width: $l-linelength-width;
+	max-width: $l-linelength-width;
 }
 
 .l-grid__sidebar {
-	
 }
-
-
-
 
 /*------------------------------------*\
     #GRID
@@ -38,8 +34,6 @@
  * Grid Container
  */
 .l-grid {
-	
-
 	@media all and (min-width: 47em) {
 		display: grid;
 		grid-template-columns: 320px 1fr;
@@ -51,5 +45,4 @@
  * Grid Item
  */
 .l-grid__item {
-
 }

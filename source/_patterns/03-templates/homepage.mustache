@@ -1,19 +1,24 @@
-{{> organisms-header }}
+<div class="l-grid">
 
-<main role="main">
+    <div class="l-grid__sidebar">
 
-    <div class="l-container">
-        {{> molecules-hero }}
-        <ul>
-            <li>CTA (How do I use it?)</li>
-            <li>Examples (demos and in-the-wild examples)</li>
-            <li>Feature list</li>
-            <li>[Download]</li>
-            <li>Contributors</li>
-        </ul>
-        
-    </div>
+        {{> organisms-header }}
 
-</main>
+    </div><!--end l-grid__sidebar-->
 
-{{> organisms-footer }}
+    <div class="l-grid__main">
+
+        <main role="main">
+
+            <div class="fpo-block">Hero with callout</div>
+            <div class="fpo-block">Features</div>
+            <div class="fpo-block">Resources</div>
+            <div class="fpo-block">Demos</div>
+            <div class="fpo-block">Contributors</div>
+        </main>
+
+        {{> organisms-footer }}
+
+    </div><!--end l-grid__main-->
+
+</div><!--end l-container"-->

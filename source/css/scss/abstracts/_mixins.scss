@@ -6,17 +6,19 @@
  * Body Styles 
  * 1) Prevent Mobile Safari from scaling up text: https://blog.55minutes.com/2012/04/iphone-text-resizing/
  */
- @mixin typographyBody() {
-    font-size: $font-size-med;
-    line-height: 1.6;
-    -webkit-text-size-adjust: 100%; /* 1 */
+@mixin typographyBody() {
+	font-family: $font-primary;
+	font-size: $font-size-med-2;
+	font-weight: 500;
+	line-height: 1.6;
+	-webkit-text-size-adjust: 100%; /* 1 */
 }
 
 /**
  * XL Type Styles
  */
- @mixin typographyBodyLarge() {
-    font-size: $font-size-med-2;
+@mixin typographyBodyLarge() {
+	font-size: $font-size-med-2;
 	line-height: $line-height-large;
 }
 
@@ -24,34 +26,34 @@
  * XL Heading Styles
  */
 @mixin typographyHeadingXl() {
-    font-size: $font-size-xl;
-    line-height: $line-height-med-2;
-    letter-spacing: -3px;
+	font-weight: 700;
+	font-size: $font-size-xl;
+	line-height: 1.1;
 }
 
 /**
  * Large Heading Styles
  */
- @mixin typographyHeadingLarge() {
-    font-size: $font-size-large;
-    font-weight: normal;
+@mixin typographyHeadingLarge() {
+	font-size: $font-size-large;
+	font-weight: 700;
 	line-height: 1.6;
 }
 
 /**
  * Medium 2 Heading Styles
  */
- @mixin typographyHeadingMed2() {
-    font-size: $font-size-med-2;
-    font-weight: normal;
+@mixin typographyHeadingMed2() {
+	font-size: $font-size-med-2;
+	font-weight: 700;
 	line-height: 1.2;
 }
 
 /**
  * Medium Heading Styles
  */
- @mixin typographyHeadingMed() {
-    font-size: $font-size-med;
-    font-weight: normal;
+@mixin typographyHeadingMed() {
+	font-size: $font-size-med;
+	font-weight: 700;
 	line-height: 1.2;
 }

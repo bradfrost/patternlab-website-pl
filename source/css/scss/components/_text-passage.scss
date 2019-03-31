@@ -6,16 +6,22 @@
  * 1) A passage of text, including various components (i.e. article, blog post)
  */
 .c-text-passage {
-
 	p {
-		margin-bottom: 1rem;
+		margin-bottom: $spacing-large;
 	}
 
 	/**
 	 * Link within the text passage
 	 */
 	a {
-		text-decoration: underline;
+		font-weight: bold;
+		border-bottom: 1px solid $color-black;
+
+		&:hover,
+		&:focus {
+			color: $color-black;
+			border-bottom-color: $color-brand-green;
+		}
 	}
 
 	/**
@@ -26,60 +32,58 @@
 		border-left: 3px solid $color-gray-73;
 		color: $color-gray-50;
 		font-size: 1rem;
-	 }
+	}
 
-	 /**
+	/**
 	  * First-level heading within text passage
 	  */
-	 h1 {
-		 margin-bottom: 1rem;
-	 }
+	h1 {
+		margin-bottom: $spacing;
+	}
 
 	/**
 	 * Second-level heading within text passage
 	 */
 	h2 {
-		margin: 1rem 0 1rem;
+		margin: 3rem 0 $spacing;
 		color: $color-gray-73;
-		font-weight: bold;
 	}
 
 	/**
 	 * Third-level heading within text passage
 	 */
 	h3 {
-		margin: 1rem 0 1rem;
+		margin: 3rem 0 $spacing;
 	}
 
 	/**
 	 * Fourth-level heading within text passage
 	 */
 	h4 {
-		margin: 1rem 0 1rem;
+		margin: 3rem 0 $spacing;
 	}
 
 	/**
 	 * Fifth-level heading within text passage
 	 */
 	h5 {
-		margin: 1rem 0 1rem;
+		margin: 3rem 0 $spacing;
 	}
 
 	/**
 	 * Sixth-level heading within text passage
 	 */
 	h6 {
-		margin: 1rem 0 1rem;
+		margin: 3rem 0 $spacing;
 	}
-
 
 	/**
 	 * Unordered list within text passage
 	 */
 	ul {
 		list-style: disc;
-		margin-left: 1rem;
-		margin-bottom: 1rem;
+		margin-left: $spacing;
+		margin-bottom: $spacing-large;
 
 		li:last-child {
 			margin-bottom: 0;
@@ -91,8 +95,8 @@
 	 */
 	ol {
 		list-style: decimal;
-		margin-left: 1rem;
-		margin-bottom: 1rem;
+		margin-left: $spacing;
+		margin-bottom: $spacing-large;
 
 		li:last-child {
 			margin-bottom: 0;
@@ -100,7 +104,11 @@
 	}
 
 	li {
-		margin-bottom: 0.5rem;
+		margin-bottom: $spacing;
 		line-height: 1.6;
+	}
+
+	pre {
+		margin-bottom: $spacing-large;
 	}
 }

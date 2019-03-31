@@ -21,9 +21,7 @@ body {
 	display: flex; /* 1 */
 	flex-direction: column; /* 1 */
 	min-height: 100vh; /* 1 */
-	font-family: $font-primary;
-	font-size:  $body-font-size;
-	line-height: $line-height-xl;
+	@include typographyBody;
 	-webkit-text-size-adjust: 100%; /* 2 */
 	background-color: $color-gray-02;
 	color: $color-gray-88;

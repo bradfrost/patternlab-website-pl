@@ -1,0 +1,6 @@
+{
+	"page": {
+		"title": "Download Pattern Lab"
+	},
+	"htmlText": "<h2>Step 1: install requirements</h2><p>make sure you have all <a href='#'>requirements downloaded</a></p><h2>Step 2: Download Pattern Lab</h2><p>Use the following command to install Pattern Lab:</p> <pre><code>npm install pattern-lab/pattern-lab-node</code></pre>"
+}

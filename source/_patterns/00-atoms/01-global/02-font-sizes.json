@@ -29,26 +29,6 @@
       "name": "$font-size-xl",
       "value": "3.8rem",
       "comment": ""
-    },
-    {
-      "name": "$font-size-h1",
-      "value": "70px !default",
-      "comment": ""
-    },
-    {
-      "name": "$font-size-h2",
-      "value": "36px !default",
-      "comment": ""
-    },
-    {
-      "name": "$font-size-h3",
-      "value": "27px !default",
-      "comment": ""
-    },
-    {
-      "name": "$font-size-h4",
-      "value": "19px !default",
-      "comment": ""
     }
   ],
   "meta": {

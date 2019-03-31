@@ -1,23 +1,24 @@
-{{> organisms-header }}
+<div class="l-grid">
 
-<main role="main">
+    <div class="l-grid__sidebar">
 
-    <div class="l-container l-grid">
+        {{> organisms-header }}
 
-        <div class="l-grid__main">
+    </div><!--end l-grid__sidebar-->
 
-    	    {{> molecules-page-header }}
+    <div class="l-grid__main">
 
-            {{> organisms-text-passage }}
+        <main role="main">
 
-        </div>
+            <div class="l-linelength-container">
+                {{> molecules-page-header }}
+                
+            </div>
 
-        <div class="l-grid__sidebar">
-            <div class="fpo" style="background: #eee; padding: 1rem; font-weight: bold; text-align: center;">Tree Navigation</div>
-        </div>
+        </main>
 
-    </div><!--end l-container"-->
+        {{> organisms-footer }}
 
-</main>
+    </div><!--end l-grid__main-->
 
-{{> organisms-footer }}
+</div><!--end l-container"-->

@@ -10,24 +10,26 @@
 	background: $color-gray-88;
 	color: $color-gray-50;
 	min-height: 100vh;
-	padding: $spacing;
+	padding: $spacing-large;
+
+	@media all and (min-width: $bp-xl) {
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		overflow: auto;
+		width: 320px; //Because fixed position
+	}
 }
 
 /**
  * Header inner
  */
 .c-header__inner {
-	display: flex;
-	flex-direction: column;
-
-	/**
-	 * Header inner within vertical header
-	 */
-	.c-header--vertical & {
-		@media all and (min-width: $bp-xl) {
-			flex-direction: column;
-			min-height: 100vh;
-		}
+	@media all and (min-width: $bp-xl) {
+		flex-direction: column;
+		min-height: 100vh;
 	}
 }
 
@@ -84,15 +86,5 @@
 		padding: 0;
 		margin-left: auto;
 		width: inherit;
-	}
-
-	/**
-	 * Active header nav container within vertical header
-	 */
-	.c-header--vertical &{
-		@media all and (min-width: $bp-xl) {
-			margin-left: 0;
-			width: 100%;
-		}
 	}
 }

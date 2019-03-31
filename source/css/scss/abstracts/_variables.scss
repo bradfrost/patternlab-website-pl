@@ -33,16 +33,16 @@
  * Breakpoints................Global breakpoint definitions
  */
 
- /*------------------------------------*\
+/*------------------------------------*\
      #COLORS
  \*------------------------------------*/
- 
+
 /**
  * Brand Colors
  * 1) Brand=specific colors
  */
 $color-brand-blue: #0000ff;
-$color-brand-green: #1ffd53;
+$color-brand-green: #08ce37;
 
 /**
  * Neutral Colors
@@ -74,10 +74,6 @@ $color-utility-success-light: #d4f3e6;
 $color-utility-warning: #a59b15;
 $color-utility-warning-light: #fffecf;
 
-
-
-
-
 /*------------------------------------*\
     #TYPOGRAPHY
 \*------------------------------------*/
@@ -85,9 +81,8 @@ $color-utility-warning-light: #fffecf;
 /**
  * Font Family
  */
-$font-primary: "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+$font-primary: neue-haas-grotesk-display, sans-serif;
 $font-secondary: monospace;
-
 
 /**
  * Font Sizing
@@ -109,10 +104,6 @@ $line-height-med-2: 1.2;
 $line-height-large: 1.6;
 $line-height-xl: 1.8;
 
-
-
-
-
 /*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
@@ -122,10 +113,6 @@ $line-height-xl: 1.8;
  */
 $l-max-width: 60rem !default;
 $l-linelength-width: 40rem !default;
-
-
-
-
 
 /*------------------------------------*\
     #SPACING
@@ -140,10 +127,6 @@ $spacing: 1rem;
 $spacing-small: round(0.5 * $spacing);
 $spacing-large: round(2 * $spacing);
 
-
-
-
-
 /*------------------------------------*\
     #BORDERS
 \*------------------------------------*/
@@ -151,16 +134,12 @@ $spacing-large: round(2 * $spacing);
 /**
  * Border
  */
- $border-thickness: 1px;
+$border-thickness: 1px;
 
 /**
  * Border radius
  */
 $border-radius: 4px;
-
-
-
-
 
 /*------------------------------------*\
     #ANIMATION
@@ -176,10 +155,6 @@ $anim-fade-long: 0.4s;
  * Transition Ease
  */
 $anim-ease: ease-out;
-
-
-
-
 
 /*------------------------------------*\
     #BREAKPOINTS

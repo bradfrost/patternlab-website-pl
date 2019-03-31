@@ -1,85 +1,194 @@
 {
-    "navToggle" : {
-        "styleModifier" : "c-btn--small c-header__nav-btn js-nav-trigger",
-        "buttonText" : "Menu"
-    },
-    "navItems" : [
-        {
-            "label" : "Nav Item",
-            "url" : "#"
-        },
-        {
-            "label" : "Nav Item",
-            "url" : "#"
-        },
-        {
-            "label" : "Nav Item",
-            "url" : "#"
-        }
-    ],
-    "footerNav" : [
-        {
-            "label" : "Footer Nav",
-            "url" : "#"
-        },
-        {
-            "label" : "Footer Nav",
-            "url" : "#"
-        },
-        {
-            "label" : "Footer Nav",
-            "url" : "#"
-        },
-        {
-            "label" : "Footer Nav",
-            "url" : "#"
-        }
-    ],
-    "treeNavItems" : [
-        {
-            "url" : "#",
-            "label" : "Download"
-        },
-        {
-            "url" : "#",
-            "label" : "Documentation",
-            "styleModifier" : "c-tree-nav__link--is-active",
-            "treeSubNav" : true,
-            "treeSubNavItems" : [
-                {
-                    "url" : "#",
-                    "label" : "Modifying the pattern header & footer"
-                },
-                {
-                    "url" : "#",
-                    "label" : "Overview of data"
-                },
-                {
-                    "url" : "#",
-                    "label" : "Overview of the Ecosystem"
-                },
-                {
-                    "url" : "#",
-                    "label" : "Stopping public/ from being cleaned"
-                },
-                {
-                    "url" : "#",
-                    "label" : "Starterkits"
-                }
-            ]
-        },
-        {
-            "url" : "#",
-            "label" : "Resources"
-        },
-        {
-            "url" : "#",
-            "label" : "Demos"
-        },
-        {
-            "url" : "#",
-            "label" : "On Github"
-        }
-    ]
-        
+	"navToggle": {
+		"styleModifier": "c-btn--small c-header__nav-btn js-nav-trigger",
+		"buttonText": "Menu"
+	},
+	"navItems": [
+		{
+			"label": "Nav Item",
+			"url": "#"
+		},
+		{
+			"label": "Nav Item",
+			"url": "#"
+		},
+		{
+			"label": "Nav Item",
+			"url": "#"
+		}
+	],
+	"footerNav": [
+		{
+			"label": "Footer Nav",
+			"url": "#"
+		},
+		{
+			"label": "Footer Nav",
+			"url": "#"
+		},
+		{
+			"label": "Footer Nav",
+			"url": "#"
+		},
+		{
+			"label": "Footer Nav",
+			"url": "#"
+		}
+	],
+	"treeNavItems": [
+		{
+			"url": "link.pages-download",
+			"label": "Download"
+		},
+		{
+			"url": "link.pages-docs-index",
+			"label": "Documentation",
+			"styleModifier": "c-tree-nav__link--is-active",
+			"treeSubNav": true,
+
+			"treeSubNavItems": [
+				{
+					"url": "link.pages-docs-detail-install",
+					"label": "Getting started",
+					"treeSubSubNav": true,
+					"treeSubSubNavItems": [
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Requirements"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Installing"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Generating"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Viewing"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Editing"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Using Commands"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Configuring"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Upgrading"
+						}
+					]
+				},
+				{
+					"url": "link.pages-docs-detail-install",
+					"label": "Working with patterns",
+					"treeSubSubNav": true,
+					"treeSubSubNavItems": [
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Overview of patterns"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Adding new patterns"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Reorganizing patterns"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Including patterns"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Linking patterns"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Documenting patterns"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Managing assets"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Managing pattern header and footer"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Using pseudo-patterns"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Using pattern parameters"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Using pattern states"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Using styleModifiers"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Hiding patterns in the navigation"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Adding annotations"
+						}
+					]
+				},
+				{
+					"url": "link.pages-docs-detail-install",
+					"label": "Working with data",
+					"treeSubSubNav": true,
+					"treeSubSubNavItems": [
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Requirements"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Overview of data"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Intro to JSON & templating engines"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Using pattern-specific data"
+						},
+						{
+							"url": "link.pages-docs-detail-install",
+							"label": "Creating lists"
+						}
+					]
+				}
+			]
+		},
+		{
+			"url": "link.pages-resources",
+			"label": "Resources"
+		},
+		{
+			"url": "link.pages-demo-gallery",
+			"label": "Demos"
+		},
+		{
+			"url": "https://github.com/pattern-lab/patternlab-node/",
+			"label": "On Github"
+		}
+	]
 }

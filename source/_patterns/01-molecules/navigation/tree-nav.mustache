@@ -1,19 +1,63 @@
 <ul class="c-tree-nav">
-    {{# treeNavItems }}
-    <li class="c-tree-nav__item">
-        <a class="c-tree-nav__link {{ styleModifier }}" href="{{ url }}">{{ label }}</a>
+	{{# treeNavItems }}
+	<li class="c-tree-nav__item">
+		<a
+			class="c-tree-nav__link {{
+				styleModifier
+			}}"
+			href="{{ url }}"
+			>{{ label }}</a
+		>
 
-        {{# treeSubNav }}
-        <ul class="c-tree-nav__subnav">
-            {{# treeSubNavItems }}
-            <li class="c-tree-nav__subnav-item">
-                <a href="{{ url }}" class="c-tree-nav__subnav-link">
-                    {{ label }}
-                </a><!--end c-tree-nav__subnav-link-->
-            </li><!--end c-tree-nav__subnav-item-->
-            {{/ treeSubNavItems }}
-        </ul><!--end c-tree-nav__subnav-->
-        {{/ treeSubNav }}
-    </li><!--end c-tree-nav__item-->
-    {{/ treeNavItems }}
-</ul><!--end c-tree-nav-->
+		{{# treeSubNav }}
+		<ul class="c-tree-nav__subnav">
+			{{# treeSubNavItems }}
+			<li
+				class="c-tree-nav__subnav-item"
+			>
+				<a
+					href="{{
+						url
+					}}"
+					class="c-tree-nav__subnav-link {{# treeSubSubNav }}c-tree-nav__subnav-link--heading{{/ treeSubSubNav }}"
+				>
+					{{
+						label
+					}} </a
+				><!--end c-tree-nav__subnav-link-->
+
+				{{# treeSubSubNav }}
+				<ul
+					class="c-tree-nav__subnav"
+				>
+					{{# treeSubSubNavItems }}
+					<li
+						class="c-tree-nav__subnav-item"
+					>
+						<a
+							href="{{
+								url
+							}}"
+							class="c-tree-nav__subnav-link"
+						>
+							{{
+								label
+							}} </a
+						><!--end c-tree-nav__subnav-link-->
+					</li>
+					<!--end c-tree-nav__subnav-item-->
+					{{/ treeSubSubNavItems }}
+				</ul>
+				<!--end c-tree-nav__subnav-->
+				{{/ treeSubSubNav }}
+			</li>
+			<!--end c-tree-nav__subnav-item-->
+			{{/ treeSubNavItems }}
+		</ul>
+		<!--end c-tree-nav__subnav-->
+		{{/ treeSubNav }}
+	</li>
+	<!--end c-tree-nav__item-->
+	{{/ treeNavItems }}
+</ul>
+<!--end c-tree-nav-->

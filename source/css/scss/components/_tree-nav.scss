@@ -9,14 +9,11 @@
 .c-tree-nav {
 }
 
-.c-tree-nav__item {
-}
-
 .c-tree-nav__link {
 	display: block;
 	margin-bottom: 1.2rem;
 	color: inherit;
-	font-weight: 700;
+	font-weight: $font-weight-bold;
 	transition: color 0.2s ease;
 
 	&:hover {
@@ -25,10 +22,6 @@
 
 	&:focus {
 		color: $color-white;
-	}
-
-	&:visited {
-		color: inherit;
 	}
 }
 
@@ -45,6 +38,7 @@
 	border-left: 1px solid $color-gray-73;
 	margin-bottom: 1rem;
 	font-size: $font-size-med;
+	display: none; // TODO: temporary
 }
 
 .c-tree-nav__subnav-link {
@@ -55,10 +49,6 @@
 	&:hover,
 	&:focus {
 		color: $color-white;
-	}
-
-	&:visited {
-		color: inherit;
 	}
 }
 

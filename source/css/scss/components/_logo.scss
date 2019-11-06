@@ -6,7 +6,9 @@
  * Branding image or text of the site
  */
 .c-logo {
-	margin-bottom: $spacing-large;
+	@media all and (min-width: $bp-med) {
+		margin-bottom: $spacing-large;
+	}
 }
 
 /**

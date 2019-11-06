@@ -26,9 +26,13 @@
  * XL Heading Styles
  */
 @mixin typographyHeadingXl() {
-	font-weight: 700;
-	font-size: $font-size-xl;
+	font-weight: $font-weight-bold;
+	font-size: $font-size-large-2;
 	line-height: 1.1;
+
+	@media all and (min-width: $bp-med) {
+		font-size: $font-size-xl;
+	}
 }
 
 /**

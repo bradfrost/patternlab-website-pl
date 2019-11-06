@@ -6,10 +6,15 @@
  * The nav inside the footer 
  */
 .c-footer-nav {
-    font-size: $font-size-sm-2;
-    display: flex;
+	font-size: $font-size-sm-2;
+
+	@media all and (min-width: $bp-med) {
+		display: flex;
+	}
 }
 
 .c-footer-nav__item {
-    margin-right: $spacing-large;
+	@media all and (min-width: $bp-med) {
+		margin-right: $spacing-large;
+	}
 }

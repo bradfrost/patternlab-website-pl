@@ -49,13 +49,13 @@ hr {
 code {
 	display: inline-block;
 	background: $color-white;
-	border: 1px solid $color-gray-27;
+	border: 1px solid $color-white;
 	font-weight: bold;
 	padding: 0.2rem;
 	line-height: 1.2;
 
 	&:hover {
-		border-color: $color-brand-green;
+		border: 1px solid $color-gray-27;
 	}
 }
 

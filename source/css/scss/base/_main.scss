@@ -7,5 +7,9 @@
  */
 main {
 	display: block;
-	margin-top: 5rem;
+	margin-top: 2rem;
+
+	@media all and (min-width: $bp-med) {
+		margin-top: 5rem;
+	}
 }

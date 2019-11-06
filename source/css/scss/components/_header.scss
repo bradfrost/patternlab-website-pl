@@ -9,17 +9,18 @@
 	position: relative;
 	background: $color-gray-88;
 	color: $color-gray-50;
-	min-height: 100vh;
-	padding: $spacing-large;
+	padding: $spacing;
 
-	@media all and (min-width: $bp-xl) {
+	@media all and (min-width: $bp-med) {
+		padding: $spacing-large;
+		min-height: 100vh;
 		flex-direction: column;
 		position: fixed;
 		top: 0;
 		left: 0;
 		height: 100vh;
 		overflow: auto;
-		width: 320px; //Because fixed position
+		width: $l-sidebar-width; //Because fixed position
 	}
 }
 
@@ -27,7 +28,13 @@
  * Header inner
  */
 .c-header__inner {
-	@media all and (min-width: $bp-xl) {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media all and (min-width: $bp-med) {
+		justify-content: flex-start;
+		align-items: flex-start;
 		flex-direction: column;
 		min-height: 100vh;
 	}
@@ -40,7 +47,7 @@
 .c-header__nav-btn {
 	margin-left: auto;
 
-	@media all and (min-width: $bp-xl) {
+	@media all and (min-width: $bp-med) {
 		display: none;
 	}
 }
@@ -52,18 +59,8 @@
 .c-header__nav-container {
 	display: none;
 
-	@media all and (min-width: $bp-xl) {
+	@media all and (min-width: $bp-med) {
 		display: block;
-		margin-left: auto;
-	}
-
-	/**
-	 * Header navigation conntainer within vertical header
-	 */
-	.c-header--vertical & {
-		@media all and (min-width: $bp-xl) {
-			margin-left: 0;
-		}
 	}
 }
 
@@ -73,14 +70,14 @@
 .c-header__nav-container.is-active {
 	display: block;
 	position: absolute;
-	background: $color-gray-07;
+	background: $color-gray-88;
 	top: 100%;
 	left: 0;
 	width: 100%;
 	z-index: 5;
-	padding: 1rem;
+	padding: $spacing;
 
-	@media all and (min-width: $bp-xl) {
+	@media all and (min-width: $bp-med) {
 		display: block;
 		position: static;
 		padding: 0;

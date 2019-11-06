@@ -1,24 +1,51 @@
 <div class="l-grid">
+	<div class="l-grid__sidebar">
+		{{> organisms-header }}
+	</div>
+	<!--end l-grid__sidebar-->
 
-    <div class="l-grid__sidebar">
+	<div class="l-grid__main">
+		<main>
+			<div class="l-container">
+				{{> molecules-page-header }}
 
-        {{> organisms-header }}
+				<video
+					autoplay=""
+					loop=""
+					playsinline=""
+					muted=""
+				>
+					<source
+						src="https://patternlab.io/assets/atomic-design.mp4"
+						type="video/mp4"
+					/>
+				</video>
 
-    </div><!--end l-grid__sidebar-->
+				<div
+					class="fpo-block"
+				>
+					Features
+				</div>
+				<div
+					class="fpo-block"
+				>
+					Resources
+				</div>
+				<div
+					class="fpo-block"
+				>
+					Demos
+				</div>
+				<div
+					class="fpo-block"
+				>
+					Contributors
+				</div>
+			</div>
+		</main>
 
-    <div class="l-grid__main">
-
-        <main role="main">
-
-            <div class="fpo-block">Hero with callout</div>
-            <div class="fpo-block">Features</div>
-            <div class="fpo-block">Resources</div>
-            <div class="fpo-block">Demos</div>
-            <div class="fpo-block">Contributors</div>
-        </main>
-
-        {{> organisms-footer }}
-
-    </div><!--end l-grid__main-->
-
-</div><!--end l-container"-->
+		{{> organisms-footer }}
+	</div>
+	<!--end l-grid__main-->
+</div>
+<!--end l-container"-->

@@ -1,6 +1,5 @@
 {
 	"navToggle": {
-		"styleModifier": "c-btn--small c-header__nav-btn js-nav-trigger",
 		"buttonText": "Menu"
 	},
 	"navItems": [
@@ -38,7 +37,7 @@
 	"treeNavItems": [
 		{
 			"url": "link.pages-download",
-			"label": "Download"
+			"label": "Getting Started"
 		},
 		{
 			"url": "link.pages-docs-index",

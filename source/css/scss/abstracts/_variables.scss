@@ -41,7 +41,6 @@
  * Brand Colors
  * 1) Brand=specific colors
  */
-$color-brand-blue: #0000ff;
 $color-brand-green: #08ce37;
 
 /**
@@ -92,7 +91,10 @@ $font-size-sm-2: 0.85rem;
 $font-size-med: 1rem;
 $font-size-med-2: 1.2rem;
 $font-size-large: 2rem;
+$font-size-large-2: 2.6rem;
 $font-size-xl: 3.8rem;
+
+$font-weight-bold: 700;
 
 /**
  * Line Height
@@ -113,6 +115,8 @@ $line-height-xl: 1.8;
  */
 $l-max-width: 60rem !default;
 $l-linelength-width: 40rem !default;
+
+$l-sidebar-width: 18.75rem;
 
 /*------------------------------------*\
     #SPACING

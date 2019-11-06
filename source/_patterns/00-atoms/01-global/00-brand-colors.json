@@ -1,13 +1,8 @@
 {
   "items": [
     {
-      "name": "$color-brand-blue",
-      "value": "#0000ff",
-      "comment": ""
-    },
-    {
       "name": "$color-brand-green",
-      "value": "#1ffd53",
+      "value": "#08ce37",
       "comment": ""
     }
   ],

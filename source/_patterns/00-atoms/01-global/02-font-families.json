@@ -1,11 +1,5 @@
 {
-  "items": [
-    {
-      "name": "$font-family-title",
-      "value": "\"neue-haas-grotesk-display, sans-serif\"",
-      "comment": ""
-    }
-  ],
+  "items": [],
   "meta": {
     "description": "To add to these items, use Sass variables that start with <code>$font-family-</code> in <code>./source/css/scss/abstracts/_variables.scss</code>"
   }

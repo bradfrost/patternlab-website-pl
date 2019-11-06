@@ -26,6 +26,11 @@
       "comment": ""
     },
     {
+      "name": "$font-size-large-2",
+      "value": "2.6rem",
+      "comment": ""
+    },
+    {
       "name": "$font-size-xl",
       "value": "3.8rem",
       "comment": ""
